@@ -109,7 +109,7 @@ def runButton():
             example = file.read()
 
     print("I got the corpus")
-    nlp = spacy.load("/NERapp/best_model")
+    nlp = spacy.load("./best_model")
     print("NER loaded")
     doc = nlp(example)
 
@@ -121,7 +121,7 @@ def runButton():
 
     import webbrowser
     new = 2
-    url = "C:/Users/nicesimo/Desktop/NLP/Model/NERapp2/data_visualisation2.html"
+    url = os.getcwd() + '/data_visualisation2.html'
     webbrowser.open(url,new=new)
     print("html page opened")
     sys.stdout.flush()
