@@ -12,6 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import pickle
+import os
 
 try:
     import Tkinter as tk
