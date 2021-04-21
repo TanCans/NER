@@ -75,11 +75,16 @@
 ## PROGRAMMING
 
 - Needed softwares are
-  - Python Compiler (Python 3.7)
-  - Doccano
+  - Python Compiler (Python 3.7 or more)
+  - Doccano (1.3.0)
 - Needed libraries are
-  - SpaCy
-  - 
+  - SpaCy (3.0.5)
+  - json
+  - Tkinter
+  - requets
+  - bs4 as Beautiful Soup
+  - Pandas
+  - Pickle
 - What electronics or programming is needed? 
 - Describe here the process of compiling the electronics and what programming is required. 
 - Could you include a sketch of your board? Ideally, you also include the source code.
