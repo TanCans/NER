@@ -39,7 +39,10 @@
 
 ## **THE TEAM**
 
+- As a research partner of the Open!Next project, a small team has created the solution so as to contribute for OSH.
+- (Names?)
 - Who are you? Tell us a little bit about your team members and your background. 
+- Our team has some basic Python skills.
 - Do you have all the skills covered?
 - What skills are you looking for?
 - How long have you been working on this project and where?
@@ -60,13 +63,23 @@
 
 ## **ABOUT THE DESIGN**
 
-- Show the process from ideation to the final design. What kind of design techniques did you use to develop this project? Do you have any original sketches or 3D designs that show how your design has evolved?
-- ?Embed your 3D files directly into your Readme either by referencing a file you have uploaded to your Project already, or by embedding a 3D file from your desktop already. **[Read this story about how to Embed a File throughout Wikifactory.](https://wikifactory.com/+wikifactory/stories/introducing-the-file-finder-and-embeds)**
-- Explain the different parts of the design if there are multiple design components. 
-- Make sure to share your design files in ??formats
+- We will perform the following: (how is this process with the application?)
+  - Create a train dataset from OSH project websites. (Giving example?)
+  - Label the dataset with the selected entities using Doccano labeling tool manually.
+  - Save the labels in a text file as JSONL.
+  - Spacy Neural Network model to train a new statistical model.
+  - We will save the model.
+  - We will create a Spacy NLP pipeline and use the new model to detect manufacturing entities.
 
-## ELECTRONICS AND PROGRAMMING (To include if your project has an electronics component)
 
+## PROGRAMMING
+
+- Needed softwares are
+  - Python Compiler (Python 3.7)
+  - Doccano
+- Needed libraries are
+  - SpaCy
+  - 
 - What electronics or programming is needed? 
 - Describe here the process of compiling the electronics and what programming is required. 
 - Could you include a sketch of your board? Ideally, you also include the source code.
@@ -95,5 +108,4 @@ Please include any additional information, files or documentation that you would
 
 References used:
 1. [Reference 1](https://wikifactory.com/+wikifactory/project-example-template/file/README.md)
-2. https://opensource.guide/starting-a-project/#writing-a-readme
-3. https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+2. 
