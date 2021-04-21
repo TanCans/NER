@@ -85,7 +85,7 @@
   - bs4 as Beautiful Soup
   - Pandas
   - Pickle
-- What electronics or programming is needed? 
+- Need to download an IDE environmennt on you computer, clone the repository on you IDE, then to run the application, run either runModel_support file one or two 
 - Describe here the process of compiling the electronics and what programming is required. 
 - Could you include a sketch of your board? Ideally, you also include the source code.
 
