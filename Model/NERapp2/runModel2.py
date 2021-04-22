@@ -62,7 +62,7 @@ class Toplevel1:
         top.minsize(148, 1)
         top.maxsize(1924, 1055)
         top.resizable(1,  1)
-        top.title("New Toplevel")
+        top.title("NER Application 2")
         top.configure(background="#d9d9d9")
 
         self.Button1 = tk.Button(top)
@@ -83,7 +83,7 @@ class Toplevel1:
         self.Label1.configure(background="#d9d9d9")
         self.Label1.configure(disabledforeground="#a3a3a3")
         self.Label1.configure(foreground="#000000")
-        self.Label1.configure(text='''Enter Corpus txt''')
+        self.Label1.configure(text='''Enter Appropedia URL''')
 
         self.Entry1 = tk.Entry(top)
         self.Entry1.place(relx=0.533, rely=0.289, height=24, relwidth=0.357)
