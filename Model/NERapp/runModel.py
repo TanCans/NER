@@ -62,7 +62,7 @@ class Toplevel1:
         top.minsize(148, 1)
         top.maxsize(1924, 1055)
         top.resizable(1,  1)
-        top.title("New Toplevel")
+        top.title("NER Application")
         top.configure(background="#d9d9d9")
 
         self.Button1 = tk.Button(top)
