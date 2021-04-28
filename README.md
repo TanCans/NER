@@ -95,27 +95,70 @@
 ### TRAINING THE MODEL
 - First step is to install spacy
 - Firstly we read the JSONL file:
-- `import json
+```
+  import json
   labeled_data = []
   with open(r"project_1_dataset_v4.jsonl", "r", encoding='utf-8') as read_file:
     for line in read_file:
         data = json.loads(line)
         labeled_data.append(data)
-  print(labeled_data)`
+  print(labeled_data)
+```
 
 - After reading our data, we need to convert the format
-- `TRAINING_DATA = []
+ ```
+ TRAINING_DATA = []
   for entry in labeled_data:
       entities = []
       for e in entry['labels']:
           entities.append((e[0], e[1],e[2]))
       spacy_entry = (entry['text'], {"entities": entities})
       TRAINING_DATA.append(spacy_entry)
-  print(TRAINING_DATA)`
- 
-- How did you prototype your project? Make sure the electronics are added onto the BOM as well
-- Do you have videos or photos to show for the different iterations?
-- Demonstrate the workflows used and as much about the process of ideation to design to physical prototype. It's a good idea to include the problems you faced and how you fixed it.
+ print(TRAINING_DATA)
+```
+- Next step is to train the model- We use Deep Learning (NN) and set a dropout rate of 0.3 to prevent overfitting.
+```
+import spacy
+import random
+import json
+from spacy.tokens import Doc
+from spacy.training import Example
+nlp = spacy.blank("en")
+ner = nlp.create_pipe("ner")
+nlp.add_pipe('ner')
+for _, annotations in TRAINING_DATA:                    #goes through all the entities are get the name token.label_ one
+    for ent in annotations.get("entities"):
+        ner.add_label(ent[2])
+# Start the training
+nlp.begin_training()
+# Loop for 40 iterations
+for itn in range(40):
+    # Shuffle the training data
+    random.shuffle(TRAINING_DATA)
+    losses = {}
+# Batch the examples and iterate over them
+    for batch in spacy.util.minibatch(TRAINING_DATA, size=2):
+        for text, annotations in batch:
+        # create Example
+            doc = nlp.make_doc(text)
+            example = Example.from_dict(doc, annotations)
+            # Update the model
+            nlp.update([example], losses=losses, drop=0.3)
+            example = Example.from_dict(doc, annotations)
+    print(losses)
+```
+- While training data, you can receive some warnings at first, then the iterations should start and take a few minutes
+- After iterations stop, we save the model
+```
+ nlp.to_disk("./my.model")
+```
+- Testing the model
+```
+from spacy import displacy
+example = "an example test"
+doc = nlp(example)
+displacy.render(doc, style='ent')
+```
 
 ## **POTENTIAL IMPROVEMENTS**
 
