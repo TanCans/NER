@@ -82,7 +82,8 @@
   - `pip install doccano`
   - `doccano`
 - Go to http://127.0.0.1:8000/
-- <img src="https://user-images.githubusercontent.com/60435723/116371480-bfbeef00-a80b-11eb-8bc1-429b771d1ac5.png" width="400">
+- Login with username: admin and password:password
+    <img src="https://user-images.githubusercontent.com/60435723/116371480-bfbeef00-a80b-11eb-8bc1-429b771d1ac5.png" width="400">
 
 
 # TRAINING THE MODEL
