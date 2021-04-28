@@ -60,7 +60,27 @@
 - Describe here the process of compiling the electronics and what programming is required. 
 - Could you include a sketch of your board? Ideally, you also include the source code.
 
-## **ABOUT THE PROTOTYPE**
+## **INSTRUCTIONS TO RUN THE APPLICATION**
+- Copy the URL of the repository
+- Open the python IDE which allows to clone github repository, in our case we used pycharm (version?)
+-	create a new project and save it
+- In the project, go to vcs and click on create git repository (for the ide it may be that you need to install git)
+- Instead of vcs, it will show git, under git select clone and paste the url
+-	It will ask to login (when private)
+-	After cloning the repository, it will open in your ide, you need to create the python environment if it has not happened automaticalyy, and the python compiler for opening application 1 or 2, go from directory to selected app, run the runModel_support 
+- The application will start in a new window, you can give your input and see the results
+
+## **INSTRUCTIONS TO MODIFY**
+
+# CREATING A DATASET
+-
+
+# LABELING THE DATA
+-This step is for labeling the entities using Doccano, but if you already have labeled data, you can skip this step and directly go to training the model.
+- First step is to install doccano, please follow the [doccano](https://doccano.github.io/doccano/getting-started/) instructions and open the program
+
+# TRAINING THE MODEL
+
 
 - How did you prototype your project? Make sure the electronics are added onto the BOM as well
 - Do you have videos or photos to show for the different iterations?
