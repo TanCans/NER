@@ -14,52 +14,23 @@
 - Documentation status of the project is ODRL 3, which means it is an early release.
 - The next steps are
   - Fullfilling the documentation
-  - 
-
-- How can the community help? - provide links to the issue board/any suitable page.
-- Who are you looking for? In terms of skills needed
+  - New use cases
+  - Enhancing the algorithm for a better score
+- The needed skills are basic python skills and some enthasuiasm.
 
 ## **THE PROBLEM**
 
-- There were already a lot of algortihms for Named Entity Recognition, but not for this specific topic with manufacturing characteristics. The algortihm can still be trained for other parameters to extract other needed information.
+- There were already a lot of algortihms for Named Entity Recognition, but not for this specific topic with manufacturing characteristics. The algortihm can still be trained with other train data or for other parameters to extract other needed information and enhance the use cases.
 
 ## **PRODUCT FEATURES/FUNCTIONS**
 
 - The algorthm uses NER of SpaCy to train the train data with Deep Learning (NN) for the characteristics mentioned. 
 - With a web application any kind of text can be given as input, and the output could be received with the classified entities.
 
-## **PROJECT VIABILITY**
-
-- How do you intend to test and measure how effectively your Hardware or Product Design meets the needs or problem you intend to solve?
-- What is your plan that will make your Project:
-    - economically sustainable
-    - scalable business model
-    - desirable and accessible to the intended end user
-- At what stage is your Project at and what proof do you have about the viability?
-
 ## **THE TEAM**
 
-- As a research partner of the Open!Next project, a small team has created the solution so as to contribute for OSH.
-- (Names?)
-- Who are you? Tell us a little bit about your team members and your background. 
+- As a research partner of the Open!Next project, a small team from Fraunhofer IPK has created the solution so as to contribute for OSH.
 - Our team has some basic Python skills.
-- Do you have all the skills covered?
-- What skills are you looking for?
-- How long have you been working on this project and where?
-
-## **THE BILL OF MATERIALS**
-
-- List the materials and components that were used in this project so far. Where the choice of materials or components was for the purpose of arriving at the first prototype, you can make note of what the Product would *ideally* be made with.
-- What was the total cost of all your materials, components and supplies? For one unit or initial batch?
-
-## **THE MANUFACTURING/PRODUCTION/ASSEMBLY**
-
-- What are the general steps for production? (you can copy and paste the general parameters from **[here]( https://github.com/OPEN-NEXT/wp3_pub/blob/master/T3.2/Documentation%20%26%20Guidelines/Production%20parameters.md)**)
-- What machines or tools did you use to make your prototype(s)? (3D printer, CNC, laser cutter?)
-- Do you know the settings of the machines or tools? (you can copy and paste the parameters from here: **[3D printing parameters](https://github.com/OPEN-NEXT/wp3_pub/blob/master/T3.2/Documentation%20%26%20Guidelines/3D%20Printing%20guideline.md)**)
-- What fabrication materials are needed?
-- Once manufactured or bought part are there, how does the assembly process look like? - Tip: support with images/vidoes for better understanding
-
 
 ## **ABOUT THE DESIGN**
 
