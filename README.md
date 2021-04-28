@@ -79,8 +79,8 @@
 -This step is for labeling the entities using Doccano, but if you already have labeled data, you can skip this step and directly go to training the model.
 - First step is to install doccano, please follow the [doccano](https://doccano.github.io/doccano/getting-started/) instructions and open the program
 - For WIndows installation,
-  - ´pip install doccano´
-  - ´doccano´
+  - `pip install doccano`
+  - `doccano`
 
 # TRAINING THE MODEL
 
