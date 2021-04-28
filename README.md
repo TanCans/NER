@@ -150,10 +150,12 @@ for itn in range(40):
 - While training data, you can receive some warnings at first, then the iterations should start and take a few minutes
 <img src="https://user-images.githubusercontent.com/60435723/116433904-3a0e6400-a84a-11eb-939c-7070aaa4d3c0.png" width="400">
 - After iterations stop, we save the model
+
 ```
  nlp.to_disk("./my.model")
 ```
 - Testing the model
+
 ```
 from spacy import displacy
 example = "an example test"
