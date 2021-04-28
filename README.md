@@ -83,7 +83,7 @@
   - `doccano`
 - Go to http://127.0.0.1:8000/
 - Login with username: admin and password:password
-   <img src="https://user-images.githubusercontent.com/60435723/116371480-bfbeef00-a80b-11eb-8bc1-429b771d1ac5.png" width="400">
+<img src="https://user-images.githubusercontent.com/60435723/116371480-bfbeef00-a80b-11eb-8bc1-429b771d1ac5.png" width="400">
 - Click create, type in your project name, description and select the sequence labeling project type
 - ![image](https://user-images.githubusercontent.com/60435723/116376637-bdab5f00-a810-11eb-817b-8e5f7cef8db9.png)
 - After creating project, click on dataset an import your dataset
