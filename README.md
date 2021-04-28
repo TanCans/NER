@@ -72,10 +72,10 @@
 
 ## **INSTRUCTIONS TO MODIFY**
 
-# CREATING A DATASET
--
+### CREATING A DATASET
+- To create a dataset, our team used basic definitions and some open source hardware plattforms. The train dataset is saved as txt to import in doccano later on.
 
-# LABELING THE DATA
+### LABELING THE DATA
 -This step is for labeling the entities using Doccano, but if you already have labeled data, you can skip this step and directly go to training the model.
 - First step is to install doccano, please follow the [doccano](https://doccano.github.io/doccano/getting-started/) instructions and open the program
 - For WIndows installation,
@@ -92,9 +92,27 @@
 - The first entity will open, you can select the word/s you want to label and continue untill all your dataset is labeled accordingly
 - After finishing the labeling process, click "Export Dataset" as JSONL file format under Actions and save the file
 
-# TRAINING THE MODEL
+### TRAINING THE MODEL
 - First step is to install spacy
+- Firstly we read the JSONL file:
+- `import json
+  labeled_data = []
+  with open(r"project_1_dataset_v4.jsonl", "r", encoding='utf-8') as read_file:
+    for line in read_file:
+        data = json.loads(line)
+        labeled_data.append(data)
+  print(labeled_data)`
 
+- After reading our data, we need to convert the format
+- `TRAINING_DATA = []
+  for entry in labeled_data:
+      entities = []
+      for e in entry['labels']:
+          entities.append((e[0], e[1],e[2]))
+      spacy_entry = (entry['text'], {"entities": entities})
+      TRAINING_DATA.append(spacy_entry)
+  print(TRAINING_DATA)`
+ 
 - How did you prototype your project? Make sure the electronics are added onto the BOM as well
 - Do you have videos or photos to show for the different iterations?
 - Demonstrate the workflows used and as much about the process of ideation to design to physical prototype. It's a good idea to include the problems you faced and how you fixed it.
