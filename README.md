@@ -85,7 +85,7 @@
 - Login with username: admin and password:password
 <img src="https://user-images.githubusercontent.com/60435723/116371480-bfbeef00-a80b-11eb-8bc1-429b771d1ac5.png" width="400">
 - Click create, type in your project name, description and select the sequence labeling project type
-- ![image](https://user-images.githubusercontent.com/60435723/116376637-bdab5f00-a810-11eb-817b-8e5f7cef8db9.png)
+<img src="https://user-images.githubusercontent.com/60435723/116376637-bdab5f00-a810-11eb-817b-8e5f7cef8db9.png" width="400">
 - After creating project, click on dataset an import your dataset
 - Go to Labels and create your labels
 - Go back to your imported dataset and click annotate
@@ -149,6 +149,7 @@ for itn in range(40):
 ```
 - While training data, you can receive some warnings at first, then the iterations should start and take a few minutes
 <img src="https://user-images.githubusercontent.com/60435723/116433904-3a0e6400-a84a-11eb-939c-7070aaa4d3c0.png" width="400">
+
 - After iterations stop, we save the model
 
 ```
