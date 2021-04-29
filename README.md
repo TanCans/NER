@@ -57,8 +57,7 @@
   - Pandas
   - Pickle
 - Need to download an IDE environmennt on you computer, clone the repository on you IDE, then to run the application, run either runModel_support file one or two 
-- Describe here the process of compiling the electronics and what programming is required. 
-- Could you include a sketch of your board? Ideally, you also include the source code.
+
 
 ## **INSTRUCTIONS TO RUN THE APPLICATION**
 - Copy the URL of the repository
@@ -166,18 +165,7 @@ displacy.render(doc, style='ent')
 
 ## **POTENTIAL IMPROVEMENTS**
 
-- How do you intend to improve this project?
-- What you would do different from the first prototype towards the final product?
-- What would you like to achieve with your project in the next year?
 
-## **Include any additional information in the Drive.**
-
-Please include any additional information, files or documentation that you would like us to consider inside the Files section of your Project.
-
-## **If you’re a company or organization:**
-- [ ] Talk to your legal department
-- [ ] Make a marketing plan for the project
-- [ ] Have a person looking after community management (identifying & inviting collaborators, responding to issues, reviewing and merging pull requests)
 
 
 References used:
