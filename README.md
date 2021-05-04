@@ -1,21 +1,21 @@
-### **Named Entity Recognition for extracting Open Source Hardware project characteristics**
+### **Named Entity Recognition for extracting Open Source Hardware project metadata**
 
 - In this repository you can find an application, which introduces a main focus in Named Entity Recognition (NLP or NER).
 - The aim is to extract common entities within a text (or webpages).
-- For this purpose, the Spacy library is used to train a deep learning model based on neural netrworks to detect entitios from text data.
+- For this purpose, the Spacy library is used to train a deep learning model based on neural netrworks to detect entities from text data.
 - To be able to train the model, it will also show how to create a train dataset and label them in order to perform NER.
 - This project is designed for the end users or developers, who need to receive the charateristics of OSH projects. 
 - The selected characteristics are manufacturing process, machine type, material and dimensions. 
-- As a future step, this informations can be linked to the suitable manufacturers for users to find corresponding Makerspace/Fablabs in order to construct their prototypes.
+- As a future step, this informations can be linked to the suitable manufacturers for users to find corresponding Makerspace/Fablabs in order to manufacture their prototypes or individualized products.
 
 ## **CURRENT STATUS**
 
-- Technology status of the project is OTRL 6, which means it is a ready-to-use product and demonstrated in relevant environment.
-- Documentation status of the project is ODRL 3, which means it is an early release.
+- Technology status of the project is [OTRL 6](https://github.com/OPEN-NEXT/LOSH/blob/master/OTRL.md#concept), which means it is a ready-to-use product and demonstrated in relevant environment.
+- Documentation status of the project is [ODRL 3](https://github.com/OPEN-NEXT/LOSH/blob/master/OTRL.md#concept), which means it is an early release.
 - The next steps are
-  - Fullfilling the documentation
+  - Completing the documentation
   - New use cases
-  - Enhancing the algorithm for a better score
+  - Enhancing the algorithm for a better accuracy
 - The needed skills are basic python skills and some enthasuiasm.
 
 ## **THE PROBLEM**
@@ -24,7 +24,7 @@
 
 ## **PRODUCT FEATURES/FUNCTIONS**
 
-- The algorthm uses NER of SpaCy to train the train data with Deep Learning (NN) for the characteristics mentioned. 
+- The algorithm uses NER of SpaCy to train the model with Deep Learning (NN) for the characteristics mentioned. 
 - With a web application any kind of text can be given as input, and the output could be received with the classified entities.
 - The application can be used for any plain text input or Mediawiki-based websites (while this was only tested on Appropedia)
 
