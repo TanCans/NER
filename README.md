@@ -26,10 +26,12 @@
 
 - The algorthm uses NER of SpaCy to train the train data with Deep Learning (NN) for the characteristics mentioned. 
 - With a web application any kind of text can be given as input, and the output could be received with the classified entities.
+- The application can be used for any plain text input or Mediawiki-based websites (while this was only tested on Appropedia)
 
 ## **THE TEAM**
 
 - As a research partner of the Open!Next project, a small team from Fraunhofer IPK has created the solution so as to contribute for OSH.
+- OPEN!NEXT received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement no. 869984.
 - Our team has some basic Python skills.
 
 ## **ABOUT THE DESIGN**
@@ -50,7 +52,7 @@
   - Doccano (1.3.0)
 - Needed libraries are
   - SpaCy (3.0.5)
-  - json
+  - json 
   - Tkinter
   - requets
   - bs4 as Beautiful Soup
@@ -61,7 +63,7 @@
 
 ## **INSTRUCTIONS TO RUN THE APPLICATION**
 - Copy the URL of the repository
-- Open the python IDE which allows to clone github repository, in our case we used pycharm (version?)
+- Open the python IDE which allows to clone github repository, in our case we used PyCharm Community Edition 2020.3.2
 -	create a new project and save it
 - In the project, go to vcs and click on create git repository (for the ide it may be that you need to install git)
 - Instead of vcs, it will show git, under git select clone and paste the url
@@ -164,10 +166,10 @@ displacy.render(doc, style='ent')
 ```
 
 ## **POTENTIAL IMPROVEMENTS**
-
+- The algorithm can be used in different use cases with corresponding train data
 
 
 
 References used:
-1. [Reference 1](https://wikifactory.com/+wikifactory/project-example-template/file/README.md)
-2. 
+1. [Reference 1](https://itnext.io/nlp-named-entity-recognition-ner-with-spacy-and-python-dabaf843cab2?gi=493e297bfed)
+2. [Reference 2]()
