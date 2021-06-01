@@ -3,7 +3,7 @@ import json
 #import the labeled data saved as a json file
 
 labeled_data = []
-with open(r"project_1_dataset_v4.jsonl", "r", encoding='utf-8') as file:
+with open(r"labeled_dataset.jsonl", "r", encoding='utf-8') as file:
     for line in file:
         data = json.loads(line)
         labeled_data.append(data)
