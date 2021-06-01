@@ -1,0 +1,2 @@
+Selective laser melting (SLM), also known as direct metal laser melting (DMLM) or laser powder bed fusion (LPBF), is a rapid prototyping, 3D printing, or additive manufacturing (AM) technique designed to use a high power-density laser to melt and fuse metallic powders together.
+To many, SLM is considered to be a subcategory of selective laser sintering (SLS). The SLM process has the ability to fully melt the metal material into a solid three-dimensional part unlike SLS.

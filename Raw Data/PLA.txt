@@ -1,0 +1,3 @@
+Polylactic acid, or polylactide (PLA) is a thermoplastic polyester with backbone formula formally obtained by condensation of lactic acid with loss of water (hence its name). It can also be prepared by ring-opening polymerization of lactide
+PLA has become a popular material due to it being economically produced from renewable resources. In 2010, PLA had the second highest consumption volume of any bioplastic of the world,[3] although it is still not a commodity polymer. Its widespread application has been hindered by numerous physical and processing shortcomings.
+PLA is the most widely used plastic filament material in 3D printing.
