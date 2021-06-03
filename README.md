@@ -169,7 +169,5 @@ displacy.render(doc, style='ent')
 - The algorithm can be used in different use cases with corresponding train data
 
 
-
 References used:
 1. [Reference 1](https://itnext.io/nlp-named-entity-recognition-ner-with-spacy-and-python-dabaf843cab2?gi=493e297bfed)
-2. [Reference 2]()
