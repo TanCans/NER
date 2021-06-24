@@ -38,118 +38,115 @@ def set_Tk_var():
     global urlLabel
     urlLabel = tk.StringVar()
 
-def set_Tk_var2():
-    global corpusLabel
-    corpusLabel = tk.StringVar()
-
 def init(top, gui, *args, **kwargs):
     global w, top_level, root
     w = gui
     top_level = top
     root = top
 
-def corpusButton():
-    example = corpusLabel.get()
-    print("I got the corpus")
-    nlp = spacy.load("./best_model")
-    print("NER loaded")
-    doc = nlp(example)
-
-    html = displacy.render(doc, style='ent')
-    with open("data_visualisation3.html", "w") as file:
-        file.write(html)
-    print("html page created")
-    file.close()
-
-    import webbrowser
-    new = 2
-    url = os.getcwd() + '/data_visualisation3.html'
-    print(url)
-    webbrowser.open(url, new=new)
-    print("html page opened")
-    sys.stdout.flush()
-
 def urlButton():
     url = urlLabel.get()
-    urls = []
-    urls.append(url)
-    transcripts = [url_to_transcript(u) for u in urls]
-    hardwares = ["hardware"]
+    split_txt = url.split(":")
+    if split_txt[0] == "https":
+        urls = []
+        urls.append(url)
+        transcripts = [url_to_transcript(u) for u in urls]
+        hardwares = ["hardware"]
 
-    for i, c in enumerate(hardwares):  # creating the txt file to load the data
-        with open(c + ".txt", "wb") as file:
-            pickle.dump(transcripts[i], file)
+        for i, c in enumerate(hardwares):  # creating the txt file to load the data
+            with open(c + ".txt", "wb") as file:
+                pickle.dump(transcripts[i], file)
 
-    data = {}
-    for i, c in enumerate(hardwares):
-        with open(c + ".txt", "rb") as file:
-            data[c] = pickle.load(file)
+        data = {}
+        for i, c in enumerate(hardwares):
+            with open(c + ".txt", "rb") as file:
+                data[c] = pickle.load(file)
 
-    def combine_text(list_of_text):
-        '''Takes a list of text and combines them into one large chunk of text.'''
-        combined_text = ' '.join(list_of_text)
-        return combined_text
+        def combine_text(list_of_text):
+            '''Takes a list of text and combines them into one large chunk of text.'''
+            combined_text = ' '.join(list_of_text)
+            return combined_text
 
-    data_combined = {key: [combine_text(value)] for (key, value) in data.items()}
+        data_combined = {key: [combine_text(value)] for (key, value) in data.items()}
 
-    pd.set_option('max_colwidth', 150)
-    data_df = pd.DataFrame.from_dict(data_combined).transpose()
-    data_df.columns = ['transcript']
-    data_df = data_df.sort_index()
+        pd.set_option('max_colwidth', 150)
+        data_df = pd.DataFrame.from_dict(data_combined).transpose()
+        data_df.columns = ['transcript']
+        data_df = data_df.sort_index()
 
-    import re
-    import string
+        import re
+        import string
 
-    def clean_text_round1(text):
-        '''Make text lowercase, remove text in square brackets, remove punctuation and remove words containing numbers.'''
-        text = text.lower()
-        text = re.sub('\[.*?\]', '', text)
-        text = re.sub('[%s]' % re.escape(string.punctuation), '', text)
-        return text
+        def clean_text_round1(text):
+            '''Make text lowercase, remove text in square brackets, remove punctuation and remove words containing numbers.'''
+            text = text.lower()
+            text = re.sub('\[.*?\]', '', text)
+            text = re.sub('[%s]' % re.escape(string.punctuation), '', text)
+            return text
 
-    round1 = lambda x: clean_text_round1(x)
+        round1 = lambda x: clean_text_round1(x)
 
-    data_clean = pd.DataFrame(data_df.transcript.apply(round1))
+        data_clean = pd.DataFrame(data_df.transcript.apply(round1))
 
-    def clean_text_round2(text):
-        '''Get rid of some additional punctuation and non-sensical text that was missed the first time around.'''
-        text = re.sub('[‘’“”…]', '', text)
-        text = re.sub('\n', ' ', text)
-        # text = re.sub('\w*\d\w*', '', text)
-        return text
+        def clean_text_round2(text):
+            '''Get rid of some additional punctuation and non-sensical text that was missed the first time around.'''
+            text = re.sub('[‘’“”…]', '', text)
+            text = re.sub('\n', ' ', text)
+            # text = re.sub('\w*\d\w*', '', text)
+            return text
 
-    round2 = lambda x: clean_text_round2(x)
+        round2 = lambda x: clean_text_round2(x)
 
-    data_clean = pd.DataFrame(data_clean.transcript.apply(round2))
-    # print(data_clean)
+        data_clean = pd.DataFrame(data_clean.transcript.apply(round2))
+        # print(data_clean)
 
-    cleaned_transcripts = [data_clean.transcript.loc[i] for i in hardwares]
+        cleaned_transcripts = [data_clean.transcript.loc[i] for i in hardwares]
 
-    for i, c in enumerate(hardwares):
-        with open(c + ".txt", "w") as file:
-            file.write(cleaned_transcripts[i])
+        for i, c in enumerate(hardwares):
+            with open(c + ".txt", "w", encoding='utf-8') as file:
+                file.write(cleaned_transcripts[i])
 
-    for i, c in enumerate(hardwares):
-        with open(c + ".txt", "r") as file:
-            example = file.read()
+        for i, c in enumerate(hardwares):
+            with open(c + ".txt", "r", encoding='utf-8') as file:
+                example = file.read()
 
-    print("I got the corpus")
-    nlp = spacy.load("./best_model")
-    print("NER loaded")
-    doc = nlp(example)
+        print("I got the corpus")
+        nlp = spacy.load("./best_model")
+        print("NER loaded")
+        doc = nlp(example)
 
-    html = displacy.render(doc, style='ent')
-    with open("data_visualisation3.html", "w") as file:
-        file.write(html)
-    print("html page created")
-    file.close()
+        html = displacy.render(doc, style='ent')
+        with open("data_visualisation3.html", "w", encoding='utf-8') as file:
+            file.write(html)
+        print("html page created")
+        file.close()
 
-    import webbrowser
-    new = 2
-    url = os.getcwd() + '/data_visualisation3.html'
-    webbrowser.open(url, new=new)
-    print("html page opened")
-    sys.stdout.flush()
+        import webbrowser
+        new = 2
+        url = os.getcwd() + '/data_visualisation3.html'
+        webbrowser.open(url, new=new)
+        print("html page opened")
+        sys.stdout.flush()
+    else:
+        example = url
+        print("I got the corpus")
+        nlp = spacy.load("./best_model")
+        print("NER loaded")
+        doc = nlp(example)
+
+        html = displacy.render(doc, style='ent')
+        with open("data_visualisation3.html", "w") as file:
+            file.write(html)
+        print("html page created")
+        file.close()
+
+        import webbrowser
+        new = 2
+        url = os.getcwd() + '/data_visualisation3.html'
+        print(url)
+        webbrowser.open(url, new=new)
+        print("html page opened")
+        sys.stdout.flush()
 
 def destroy_window():
     # Function which closes the window.
