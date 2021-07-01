@@ -5,6 +5,8 @@
 #  in conjunction with Tcl version 8.6
 #    Apr 28, 2021 02:08:02 PM CEST  platform: Windows NT
 
+#This file can be considered as the front end of the tkinter window
+
 import sys
 from PIL import Image, ImageTk
 
@@ -23,11 +25,12 @@ except ImportError:
 import runModel3_support
 
 def vp_start_gui():
-    '''Starting point when module is the main routine.'''
+    #Starting point when module is the main routine
     global val, w, root
-    root = tk.Tk()
+    root = tk.Tk()                                  #create the basic root for the Tkinter window
     runModel3_support.set_Tk_var()
 
+    #integrate the IPK logo on the window
     image1 = Image.open("IPK.png")
     image1 = image1.resize((201, 100), Image.ANTIALIAS)
     test = ImageTk.PhotoImage(image1)
@@ -38,6 +41,7 @@ def vp_start_gui():
 
     from tkinter import Canvas, PhotoImage
 
+    #create a canvas on the window with the OpenNext logo on it
     canvas = Canvas(root, width=150, height=150, highlightthickness=0)
     canvas.place(relx=0.74, rely=-0.04)
     img = Image.open("openNext.png")
@@ -69,8 +73,9 @@ def destroy_Toplevel1():
 
 class Toplevel1:
     def __init__(self, top=None):
-        '''This class configures and populates the toplevel window.
-           top is the toplevel containing window.'''
+        #This class configures and populates the toplevel window.
+        #top is the toplevel containing window
+
         _bgcolor = '+'  # X11 color: 'gray85'
         _fgcolor = '#000000'  # X11 color: 'black'
         _compcolor = '#d9d9d9' # X11 color: 'gray85'
@@ -91,6 +96,8 @@ class Toplevel1:
         top.title("NER Application")
         top.configure(background="#2ca971")
 
+
+        #Here you configure the parameters of the run Model Button
         self.Button1 = tk.Button(top)
         self.Button1.place(relx=0.4, rely=0.7, height=53, relwidth=0.2)
         self.Button1.configure(activebackground="#ececec")
@@ -104,6 +111,7 @@ class Toplevel1:
         self.Button1.configure(pady="0")
         self.Button1.configure(text='''Run Model''')
 
+        # Here you configure the parameters of the Entry
         self.Entry3 = tk.Entry(top)
         self.Entry3.place(relx=0.1, rely=0.45, height=108, relwidth=0.8)
         self.Entry3.configure(background="white")
@@ -113,6 +121,7 @@ class Toplevel1:
         self.Entry3.configure(insertbackground="black")
         self.Entry3.configure(textvariable=runModel3_support.urlLabel)
 
+        # Here you configure the parameters of the Label
         self.Label2 = tk.Label(top)
         self.Label2.place(relx=0.275, rely=0.37, height=26, relwidth=0.45)
         self.Label2.configure(background="#d9d9d9")
