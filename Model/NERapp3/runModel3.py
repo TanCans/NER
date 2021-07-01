@@ -34,15 +34,16 @@ def vp_start_gui():
     label1 = tk.Label(image=test)
     label1.image = test
     # Position image
-    label1.place(relx=0.02, rely=0.02)
+    label1.place(relx=0, rely=0)
 
-    image2 = Image.open("openNext.png")
-    image2 = image2.resize((153, 150), Image.ANTIALIAS)
-    test = ImageTk.PhotoImage(image2)
-    label2 = tk.Label(image=test)
-    label2.image = test
-    # Position image
-    label2.place(relx=0.73, rely=0.02)
+    from tkinter import Canvas, PhotoImage
+
+    canvas = Canvas(root, width=150, height=150, highlightthickness=0)
+    canvas.place(relx=0.74, rely=-0.04)
+    img = Image.open("openNext.png")
+    img = img.resize((153, 150), Image.ANTIALIAS)
+    canvas.image = ImageTk.PhotoImage(img)
+    canvas.create_image(75, 75, image=canvas.image)
 
     top = Toplevel1(root)
     runModel3_support.init(root, top)
@@ -91,7 +92,7 @@ class Toplevel1:
         top.configure(background="#2ca971")
 
         self.Button1 = tk.Button(top)
-        self.Button1.place(relx=0.4, rely=0.65, height=53, relwidth=0.2)
+        self.Button1.place(relx=0.4, rely=0.7, height=53, relwidth=0.2)
         self.Button1.configure(activebackground="#ececec")
         self.Button1.configure(activeforeground="#000000")
         self.Button1.configure(background="#d9d9d9")
@@ -104,7 +105,7 @@ class Toplevel1:
         self.Button1.configure(text='''Run Model''')
 
         self.Entry3 = tk.Entry(top)
-        self.Entry3.place(relx=0.1, rely=0.5, height=54, relwidth=0.8)
+        self.Entry3.place(relx=0.1, rely=0.45, height=108, relwidth=0.8)
         self.Entry3.configure(background="white")
         self.Entry3.configure(disabledforeground="#a3a3a3")
         self.Entry3.configure(font="TkFixedFont")
@@ -113,7 +114,7 @@ class Toplevel1:
         self.Entry3.configure(textvariable=runModel3_support.urlLabel)
 
         self.Label2 = tk.Label(top)
-        self.Label2.place(relx=0.275, rely=0.4, height=26, relwidth=0.45)
+        self.Label2.place(relx=0.275, rely=0.37, height=26, relwidth=0.45)
         self.Label2.configure(background="#d9d9d9")
         self.Label2.configure(disabledforeground="#a3a3a3")
         self.Label2.configure(foreground="#000000")
